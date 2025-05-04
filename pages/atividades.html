@@ -7,6 +7,23 @@
     <title>Atividades</title>
 </head>
 <body>
-    
+    <!-- Lista de itens Título de nível 4 -->
+    <h4>Lista:</h4>
+    <ul>
+        <li>página linkada</li>
+        <li>lista criada</li>
+        <li>imagens dinâmicas adicionadas</li>
+    </ul>
+
+    <h4>Imagem Dinâmica: </h4>
+    <!-- Elemento <picture> para fornecer imagens diferentes dependendo da largura da tela -->
+    <picture>
+        <!-- Para telas com largura até 550px, exibe a imagem "foto-p.png" -->
+       <source media="(max-width: 550px)" srcset="../assets/imagens/foto-p.png" type="image/png"> 
+       <!-- Para telas com largura até 1000px, exibe a imagem "foto-m.png" -->
+       <source media="(max-width: 1000px)" srcset="../assets/imagens/foto-m.png" type="image/png">
+       <!-- Para telas maiores que 1000px, exibe a imagem "foto-g.png" -->
+       <img src="../assets/imagens/foto-g.png" alt="imagem flexível">
+    </picture>
 </body>
 </html>
