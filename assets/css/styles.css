@@ -1,0 +1,105 @@
+
+@charset "UTF-8";
+
+/* Variáveis para o site */
+:root {
+    --fundo: #f5f3ff;        /* Lilás clarinho */
+    --texto-principal: #333333;    /* Texto escuro */
+    --titulo-principal: #5b2c6f;   /* Roxo escuro */
+    --botao-primario: #ff6f61;     /* Laranja */
+    --botao-hover: #e35d54;        /* Laranja escuro */
+    --destaque: #f7c948;           /* Amarelo */
+    --branco: #ffffff;
+}
+
+/* Estilos base */
+body {
+    background-color: var(--fundo);
+    color: var(--texto-principal);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Quando o usuário preferir modo escuro 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fundo: #1e1e1e;            
+        --texto-principal: #f5f5f5;  
+        --titulo-principal: #bb86fc; 
+        --botao-primario: #03dac5;   
+        --botao-hover: #018786;      
+        --destaque: #ffd600;        
+        --branco: #ffffff;
+    }
+}*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--branco);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Logo */
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+/* Título */
+.site-title {
+    font-size: 2rem;
+    color: var(--titulo-principal);
+    text-align: center;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.highlight {
+    color: var(--destaque);
+}
+
+/* Botão */
+.button-atividades {
+    background-color: var(--botao-primario);
+    color: var(--branco);
+    padding: 10px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-left: 20px;
+}
+.button-atividades:hover {
+    background-color: var(--botao-hover);
+}
+
+/* Ajuste para o container do botão */
+.button-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo das seções: espaçamento inferior */
+section {
+    margin-bottom: 30px; /* Adiciona uma margem inferior de 30px em cada seção */
+}
+/* Estilo padrão para todas as seções: alinhamento e espaçamento */
+section {
+    text-align:justify; /* Centraliza o texto dentro de cada seção */
+    margin: 27px auto; /* Adiciona uma margem superior e inferior de 27px, centralizando as seções horizontalmente */
+    padding: 20px; /* Adiciona 20px de padding (espaçamento interno) em todas as direções */
+    max-width: 98%; /* Define a largura máxima da seção para 98% da largura disponível */
+    border-radius: 8px; /* Define bordas arredondadas com raio de 8px */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura do elemento */
+}

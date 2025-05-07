@@ -4,26 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/icones/favicon-a.ico" type="x-icon">
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
     <title>Atividades</title>
 </head>
 <body>
-    <!-- Lista de itens Título de nível 4 -->
-    <h4>Lista:</h4>
-    <ul>
-        <li>página linkada</li>
-        <li>lista criada</li>
-        <li>imagens dinâmicas adicionadas</li>
-    </ul>
 
-    <h4>Imagem Dinâmica: </h4>
-    <!-- Elemento <picture> para fornecer imagens diferentes dependendo da largura da tela -->
-    <picture>
-        <!-- Para telas com largura até 550px, exibe a imagem "foto-p.png" -->
-       <source media="(max-width: 550px)" srcset="../assets/imagens/foto-p.png" type="image/png"> 
-       <!-- Para telas com largura até 1000px, exibe a imagem "foto-m.png" -->
-       <source media="(max-width: 1000px)" srcset="../assets/imagens/foto-m.png" type="image/png">
-       <!-- Para telas maiores que 1000px, exibe a imagem "foto-g.png" -->
-       <img src="../assets/imagens/foto-g.png" alt="imagem flexível">
-    </picture>
+     <!-- cabeçalho do site -->
+     <header class="header">
+        <!-- logo do site -->
+        <div class="logo-container">
+            <img src="../assets/imagens/logo.png" alt="Logo Bingo Online" class="logo">
+        </div>
+        <h1 class="site-title">Bem-vindos</h1>
+        <!-- botão para a página de atividades -->
+        <div class="button-container">
+            <a href="../index.html" class="button-atividades">voltar</a>
+        </div>
+    </header>
+
+    <section> 
+        <article>
+            <!-- Lista de itens Título de nível 4 -->
+            <h4>Lista:</h4>
+            <ul>
+                <li>Página linkada</li>
+                <li>Lista criada</li>
+                <li>Imagens dinâmicas adicionadas</li>
+                <li>Vídeo adicionado</li>
+            </ul>
+        </article>
+    </section>
+
+    <section> 
+        <article>
+            <h4>Imagem Dinâmica: </h4>
+            <!-- Elemento <picture> para fornecer imagens diferentes dependendo da largura da tela -->
+                <picture>
+                    <!-- Para telas com largura até 550px, exibe a imagem "foto-p.png" -->
+                <source media="(max-width: 550px)" srcset="../assets/imagens/foto-p.png" type="image/png"> 
+                <!-- Para telas com largura até 1000px, exibe a imagem "foto-m.png" -->
+                <source media="(max-width: 1000px)" srcset="../assets/imagens/foto-m.png" type="image/png">
+                <!-- Para telas maiores que 1000px, exibe a imagem "foto-g.png" -->
+                <img src="../assets/imagens/foto-g.png" alt="imagem flexível">
+                </picture>
+        </article>
+    </section>
+
+    <section> 
+        <article>
+            <h4>Reprodução do áudio:</h4>
+            <!-- Título para a seção de áudio -->
+            <audio src="../assets/midia/guanacast-33.mp3" controls></audio>
+            <!-- Elemento <audio> para reproduzir áudio com controles (play, pause, volume) -->
+
+        </article>
+    </section>
+
+    <section> 
+         <article>
+            <h4>Reprodução do vídeo externo:</h4>
+            <!-- Incorporando um vídeo do YouTube com a tag <iframe> -->
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/gDHHuL3mv-U" 
+                title="YouTube Video Player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+                </iframe>
+         </article>
+    </section>
+
 </body>
 </html>
