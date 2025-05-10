@@ -1,11 +1,12 @@
 
 @charset "UTF-8";
 
-/* Variáveis para o site */
+/* Variáveis para o site com paleta apropriada para daltônicos ( Deuteranopia, Protanopia, Tritanopia )
+*/
 :root {
     --fundo: #f5f3ff;        /* Lilás clarinho */
     --texto-principal: #333333;    /* Texto escuro */
-    --titulo-principal: #5b2c6f;   /* Roxo escuro */
+    --titulo-principal: #9D8FF9;   /* Roxo */
     --botao-primario: #ff6f61;     /* Laranja */
     --botao-hover: #e35d54;        /* Laranja escuro */
     --destaque: #f7c948;           /* Amarelo */
@@ -18,19 +19,6 @@ body {
     color: var(--texto-principal);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
-
-/* Quando o usuário preferir modo escuro 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --fundo: #1e1e1e;            
-        --texto-principal: #f5f5f5;  
-        --titulo-principal: #bb86fc; 
-        --botao-primario: #03dac5;   
-        --botao-hover: #018786;      
-        --destaque: #ffd600;        
-        --branco: #ffffff;
-    }
-}*/
 
 /* Reset básico */
 * {
