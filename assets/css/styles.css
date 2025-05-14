@@ -149,39 +149,81 @@ footer {
     box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
+
+/* MEDIA QUERIES */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  input[type="number"] {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
+/* RESPONSIVO: tablets (≥600px) */
+@media (min-width: 600px) {
     .header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .site-title {
-        text-align: left;
-        margin: 10px 0;
+        font-size: 2rem;
+        margin-left: 20px;
     }
 
     .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+        width: auto;
     }
 
     .nav-links {
-        flex-direction: column;
-        width: 100%;
-        gap: 5px;
+        flex-direction: row;
+        gap: 15px;
+        width: auto;
     }
 
     .auth-buttons {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row;
+        gap: 10px;
+        width: auto;
     }
 
-    .auth-buttons .btn,
-    .auth-buttons .btn-outline {
-        width: 100%;
-        text-align: center;
+    .btn, .btn-outline {
+        width: auto;
+    }
+
+    section {
+        max-width: 90%;
+    }
+}
+
+/* RESPONSIVO: desktops (≥992px) */
+@media (min-width: 992px) {
+    body {
+        font-size: 18px;
+    }
+
+    section {
+        max-width: 800px;
+    }
+
+    .site-title {
+        font-size: 2.2rem;
     }
 }
