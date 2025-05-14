@@ -1,43 +1,22 @@
 
 @charset "UTF-8";
 
-/* Variáveis para o site com paleta apropriada para daltônicos ( Deuteranopia, Protanopia, Tritanopia )
-*/
-:root {
-    --fundo: #f5f3ff;        /* Lilás clarinho */
-    --texto-principal: #333333;    /* Texto escuro */
-    --titulo-principal: #9D8FF9;   /* Roxo */
-    --botao-primario: #ff6f61;     /* Laranja */
-    --botao-hover: #e35d54;        /* Laranja escuro */
-    --destaque: #f7c948;           /* Amarelo */
-    --branco: #ffffff;
-}
-
-/* Estilos base */
-body {
-    background-color: var(--fundo);
-    color: var(--texto-principal);
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Estilos para o header */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--branco);
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Variáveis para o site com paleta apropriada para daltônicos */
+:root {
+    --fundo: #f5f3ff;            /* Lilás clarinho */
+    --texto-principal: #333333; /* Texto escuro */
+    --titulo-principal: #9D8FF9;/* Roxo */
+    --botao-primario: #ff6f61;  /* Laranja */
+    --botao-hover: #e35d54;     /* Laranja escuro */
+    --destaque: #f7c948;        /* Amarelo */
+    --branco: #ffffff;
 }
-
-
 /* Logo */
 .logo {
     height: 80px;
@@ -53,11 +32,75 @@ body {
     margin-left: 20px;
 }
 
-.highlight {
-    color: var(--destaque);
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--branco);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Botão */
+/* Estilos base */
+body {
+    background-color: var(--fundo);
+    color: var(--texto-principal);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Menu de navegação */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--titulo-principal);
+}
+/* Botões de autenticação */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    background-color: var(--botao-primario);
+    color: var(--branco);
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn:hover {
+    background-color: var(--botao-hover);
+}
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--botao-primario);
+    color: var(--botao-primario);
+}
+.btn-outline:hover {
+    background-color: var(--botao-hover);
+    color: var(--branco);
+    border-color: var(--botao-hover);
+}
+
+/* Botão original de atividades */
 .button-atividades {
     background-color: var(--botao-primario);
     color: var(--branco);
@@ -72,22 +115,73 @@ body {
     background-color: var(--botao-hover);
 }
 
-/* Ajuste para o container do botão */
+/* Container antigo (ainda presente para compatibilidade) */
 .button-container {
     display: flex;
     align-items: center;
 }
 
-/* Estilo das seções: espaçamento inferior */
-section {
-    margin-bottom: 30px; /* Adiciona uma margem inferior de 30px em cada seção */
+/* Destaque */
+.highlight {
+    color: var(--destaque);
 }
-/* Estilo padrão para todas as seções: alinhamento e espaçamento */
+
+/* Seções */
 section {
-    text-align:justify; /* Centraliza o texto dentro de cada seção */
-    margin: 27px auto; /* Adiciona uma margem superior e inferior de 27px, centralizando as seções horizontalmente */
-    padding: 20px; /* Adiciona 20px de padding (espaçamento interno) em todas as direções */
-    max-width: 98%; /* Define a largura máxima da seção para 98% da largura disponível */
-    border-radius: 8px; /* Define bordas arredondadas com raio de 8px */
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura do elemento */
+    text-align: justify;
+    margin: 27px auto;
+    padding: 20px;
+    max-width: 98%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: var(--branco);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--titulo-principal);
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: var(--branco);
+    box-shadow: 0 -1px 4px rgba(0,0,0,0.05);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        text-align: left;
+        margin: 10px 0;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .auth-buttons .btn,
+    .auth-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
 }

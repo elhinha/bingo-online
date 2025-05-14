@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- adicionando favicon-->
-    <link rel="shortcut icon" href="../bingo-online/assets/icones/favicon-b.ico" type="image/x-icon"> 
+    <!-- adicionando favicon -->
+    <link rel="shortcut icon" href="../bingo-online/assets/icones/favicon-b.ico" type="image/x-icon">
     <!-- adicionando estilo css -->
-    <link rel="stylesheet" href="../bingo-online/assets/css/styles.css"> 
+    <link rel="stylesheet" href="../bingo-online/assets/css/styles.css">
     <title>Bingo Online</title>
 </head>
 <body>
-    <!-- cabeçalho do site -->
+    <!-- Cabeçalho do site -->
     <header class="header">
-        <!-- logo do site -->
         <div class="logo-container">
             <img src="../bingo-online/assets/imagens/logo.png" alt="Logo Bingo Online" class="logo">
         </div>
-        <h1 class="site-title">Bem-vindos</h1>
-        <!-- botão para a página de atividades -->
-        <div class="button-container">
-            <a href="../bingo-online/pages/atividades.html" class="button-atividades">Atividades</a>
-        </div>
+        <h1 class="site-title">Bingo Online</h1>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../bingo-online/pages/atividades.html">Atividades</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="btn">Cadastrar</button>
+                <button class="btn btn-outline">Entrar</button>
+            </div>
+        </nav>
     </header>
 
+    <!-- Conteúdo principal -->
+    <main>
+     
+        <section>
+            <h2>Bem-vindo ao Bingo Online!</h2>
+            <p>Organize seu bingo de forma prática e moderna. Gere cartelas personalizadas e realize sorteios com transparência.</p>
+        </section>
+
+        <!-- Seção de geração de cartelas -->
+        <section id="gerar-cartelas">
+            <h2>Gerar Cartelas</h2>
+            <form id="form-cartelas">
+                <label for="quantidade">Quantidade de Cartelas:</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" max="100" required>
+
+                <label for="numeros-por-cartela">Número mínimo:</label>
+                <input type="number" id="numeros-por-cartela" name="numeros-por-cartela" min="10" max="90" required>
+
+                <label for="numeros-por-cartela">Número máximo:</label>
+                <input type="number" id="numeros-por-cartela" name="numeros-por-cartela" min="10" max="90" required>
+
+                <button type="submit" class="btn">Gerar Cartelas</button>
+            </form>
+            <div id="resultado-cartelas">
+                <!-- Aqui as cartelas serão exibidas futuramente -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Bingo Online. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
