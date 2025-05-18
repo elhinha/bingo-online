@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Bingo Online</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      background-color: var(--branco);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--titulo-principal);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus {
+      border-color: var(--botao-primario);
+      outline: none;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      display: none;
+      margin-top: 0.3rem;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: var(--botao-primario);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn-login:hover {
+      background-color: var(--botao-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="login-container">
+    <h2>Entrar no Bingo Online</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required />
+        <span class="error" id="emailError">Informe um e-mail válido.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" minlength="6" required />
+        <span class="error" id="senhaError">A senha deve ter pelo menos 6 caracteres.</span>
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+  </main>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const senha = document.getElementById('senha');
+    const emailError = document.getElementById('emailError');
+    const senhaError = document.getElementById('senhaError');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let valido = true;
+
+      // Validação de e-mail
+      if (!email.value.includes('@') || !email.value.includes('.')) {
+        emailError.style.display = 'block';
+        valido = false;
+      } else {
+        emailError.style.display = 'none';
+      }
+
+      // Validação de senha
+      if (senha.value.length < 6) {
+        senhaError.style.display = 'block';
+        valido = false;
+      } else {
+        senhaError.style.display = 'none';
+      }
+
+      if (valido) {
+        alert('Login simulado com sucesso!');
+        window.location.href = "admin.html"; // ajuste o caminho se necessário
+      }
+    });
+  </script>
+</body>
+</html>
