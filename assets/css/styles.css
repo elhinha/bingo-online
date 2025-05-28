@@ -115,7 +115,7 @@ body {
     background-color: var(--botao-hover);
 }
 
-/* Container antigo (ainda presente para compatibilidade) */
+/* Container antigo */
 .button-container {
     display: flex;
     align-items: center;
